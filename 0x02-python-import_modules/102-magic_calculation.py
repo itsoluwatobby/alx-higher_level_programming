@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 def magic_calculation(a, b):
     """outputs the corresponding bytecode provided"""
     from magic_calculation_102 import add, sub
@@ -10,4 +11,4 @@ def magic_calculation(a, b):
         return (x)
 
     else:
-        return(sub(a, b))
+        return (sub(a, b))
