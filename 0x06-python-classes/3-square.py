@@ -22,3 +22,4 @@ class Square:
         """returns the area of the square"""
         self.area = self.__size * self.__size 
         return (self.area)
+
