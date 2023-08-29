@@ -7,12 +7,12 @@ class Square:
     __size = None
 
     def __init__(self, size=0):
-         """Initialize an instance of a square.
+        """Initialize an instance of a square.
 
         Args:
             size (int): The size of the new square.
         """
-        self.size = size
+        self.__size = size
 
     @property
     def size(self):
