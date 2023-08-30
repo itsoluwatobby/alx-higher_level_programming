@@ -2,7 +2,6 @@
 
 """ Python class that does exactly the same as the Python bytecode """
 
-
 import math
 
 
