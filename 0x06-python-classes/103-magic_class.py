@@ -1,10 +1,13 @@
-import math
+#!/usr/bin/python3
 
 """Definition of a MagicClass matching a bytecode provided by Holberton"""
 
+
+import math
+
+
 class MagicClass:
     """Represents a Circle"""
-    __radius = None
 
     def __init__(self, value=0):
         """Initialize an instance MagicClass.
@@ -24,4 +27,3 @@ class MagicClass:
      def circumference(self):
         """Returns the circumference of the MagicClass."""
         return (2 * math.pi * self.__radius)
-

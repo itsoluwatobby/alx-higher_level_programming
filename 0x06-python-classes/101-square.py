@@ -2,10 +2,9 @@
 
 """Definition of a Square class"""
 
+
 class Square:
     """Represents a square"""
-    __size = None
-    __position = None
 
     def __init__(self, size=0, position=(0, 0)):
         """Initialize an instance of a square.
@@ -70,4 +69,3 @@ class Square:
             if i != self.__size - 1:
                 print("")
         return ("")
-

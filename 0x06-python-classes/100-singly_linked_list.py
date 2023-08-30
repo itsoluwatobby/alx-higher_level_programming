@@ -2,10 +2,9 @@
 
 """Definition of a Square class"""
 
+
 class Node:
     """Represents a square"""
-    __data = None
-    __next_node = None
 
     def __init__(self, data, next_node=None):
         """Initialize an instance of a square.
@@ -41,11 +40,12 @@ class Node:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
+
 """Definition of a class SinglyLinkedList"""
+
 
 class SinglyLinkedList:
     """Represents a square"""
-    __head = None
 
     def __init__(self):
         """Initialize an instance of singlyLinkedList"""
@@ -83,4 +83,3 @@ class SinglyLinkedList:
             values.append(str(tmp.data))
             tmp = tmp.next_node
         return ('\n'.join(values))
-
