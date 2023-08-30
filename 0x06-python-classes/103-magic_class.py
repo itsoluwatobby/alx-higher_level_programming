@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-
-"""Definition of a MagicClass that does the same thing as the provided Python bytecode"""
+""" Python class that does exactly the same as the Python bytecode """
 
 
 import math
@@ -10,16 +9,16 @@ import math
 class MagicClass:
     """Represents a Circle"""
 
-    def __init__(self, value=0):
+    def __init__(self, radius=0):
         """Initialize an instance MagicClass.
 
         Arg:
             radius (float or int): The radius of the new MagicClass.
         """
         self.__radius = 0
-        if type(value) is not int and type(value) is not float:
+        if type(radius) is not int and type(radius) is not float:
             raise TypeError("radius must be a number")
-        self.__radius = value
+        self.__radius = radius
 
     def area(self):
         """Returns the area of the MagicClass."""
