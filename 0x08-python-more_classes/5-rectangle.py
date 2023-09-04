@@ -13,8 +13,8 @@ class Rectangle:
             
             It takes in two parameter
         Args:
-            width = The private Rectangle width
-            height = The private Rectangle height
+            width (int): The private Rectangle width
+            height (int): The private Rectangle height
         """
         self.__width = width
         self.__height = height
