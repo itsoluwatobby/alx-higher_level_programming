@@ -7,10 +7,9 @@ class Rectangle:
     """This is a class representation of Rectangle."""
 
     def __init__(self, width=0, height=0):
-        """
-            This is an instance of the class Rectangle
-            
+        """This is an instance of the class Rectangle
             It takes in two parameter
+        
         Args:
             width = The public Rectangle width
             height = The private Rectangle height
