@@ -4,9 +4,7 @@
 
 
 class Rectangle:
-    """
-        This is a class representation of Rectangle
-    """
+    """This is a class representation of Rectangle."""
 
     def __init__(self, width=0, height=0):
         """
