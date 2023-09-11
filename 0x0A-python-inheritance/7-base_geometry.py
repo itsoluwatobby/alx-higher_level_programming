@@ -1,13 +1,9 @@
 #!/usr/bin/python3
 """Defines a class BaseGeometry"""
 
-
+i
 class BaseGeometry:
     """An instance of BaseGeometry class"""
-    
-    def __init__(self):
-        """Creates an instance of BaseGeometry class"""
-        pass
 
     def area(self):
         """Raises a not implemented Exception"""
@@ -20,8 +16,11 @@ class BaseGeometry:
         Args:
             name - given string arg name
             value - expected to be an integer value
+        Raises:
+            TypeError: If value is not an integer.
+            ValueError: If value is <= 0.
         """
-        if type(value) is not int:
+        if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
         elif value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
