@@ -10,12 +10,8 @@ class Square(Rectangle):
         """Initializes an instance of a Square class
 
         Args:
-            size - given size of an instance of the square class
+            size (int) - given size of an instance of the square class
         """
-        super().__init__(size, size)
         self.integer_validator('size', size)
+        super().__init__(size, size)
         self.__size = size
-
-    def area(self):
-        """Return the area the square class"""
-        return (self.__size * self.__size)
