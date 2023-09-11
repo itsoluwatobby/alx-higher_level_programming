@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Defines a class BaseGeometry"""
 
-i
+
 class BaseGeometry:
     """An instance of BaseGeometry class"""
 
