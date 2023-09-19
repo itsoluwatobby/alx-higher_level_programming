@@ -1,14 +1,18 @@
 #!/usr/bin/python3
-"""Defines a class Square that inherits for the Rectangle class"""
-
+"""
+Defines a class Square that inherits for the Rectangle class
+"""
 from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Represents a Square class"""
+    """
+    Represents a Square class
+    """
 
     def __init__(self, size, x=0, y=0, id=None):
-        """Instantiates the sqaure class
+        """
+        Instantiates the sqaure class
     
         Args:
             Args:
@@ -23,11 +27,13 @@ class Square(Rectangle):
             ValueError: If either of x or y < 0.
         """
         super().__init__(size, size, x, y, id)
-        self.__size = size
+        self.size = size
 
     @property
     def size(self):
-        """Returns the size of the square"""
+        """
+        Returns the size of the square
+        """
         return self.__size
 
     @size.setter
@@ -39,7 +45,8 @@ class Square(Rectangle):
         self.__size = value
 
     def update(self, *args, **kwargs):
-        """Update the Square.
+        """
+        Update the Square.
 
         Args:
         *args (ints): New attribute values.
@@ -81,7 +88,9 @@ class Square(Rectangle):
                     self.__y = v
 
     def to_dictionary(self):
-        """Return the dictionary representation of the Square."""
+        """
+        Return the dictionary representation of the Square.
+        """
         return {
             "id": self.id,
             "x": self.x,
@@ -90,7 +99,9 @@ class Square(Rectangle):
         }
 
     def __str__(self):
-        """Returns the print() and str() representation of the Square class."""
+        """
+        Returns the print() and str() representation of the Square class.
+        """
         return ("[{}] ({}) {}/{} - {}".format(self.__class__.__name__, self.id,
                                                        self.x, self.y,
                                                        self.__size))
