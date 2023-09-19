@@ -1,14 +1,18 @@
 #!/usr/bin/python3
-"""Defines a class Rectangle which inherits from the Base class"""
-
+"""
+Defines a class Rectangle which inherits from the Base class
+"""
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Represents a class rectangle which inherits from the base class"""
+    """
+    Represents a class rectangle which inherits from the base class
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Intantiates a class Rectangle
+        """
+        Intantiates a class Rectangle
 
         Args:
             width (int) - width of rectangle
@@ -22,14 +26,16 @@ class Rectangle(Base):
             ValueError: If either of x or y < 0.
         """
         super().__init__(id)
-        self.__width = width
+        self.width = width
         self.height = height
-        self.__x = x
+        self.x = x
         self.y = y
 
     @property
     def width(self):
-        """Returns the width"""
+        """
+        Returns the width
+        """
         return self.__width
 
     @width.setter
@@ -42,7 +48,9 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """Returns the height"""
+        """
+        Returns the height
+        """
         return self.__height
 
     @height.setter
@@ -55,7 +63,9 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """Returns the x coordinate"""
+        """
+        Returns the x coordinate
+        """
         return self.__x
 
     @x.setter
@@ -80,11 +90,15 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """Return the area of the Rectangle."""
+        """
+        Return the area of the Rectangle.
+        """
         return self.__width * self.__height
 
     def display(self):
-        """Print the Rectangle with `#` character."""
+        """
+        Print the Rectangle with `#` character.
+        """
         if self.__width == 0 or self.__height == 0:
             print("")
             return
@@ -96,7 +110,8 @@ class Rectangle(Base):
             print("")
 
     def update(self, *args, **kwargs):
-        """Update the Rectangle.
+        """
+        Update the Rectangle.
 
         Args:
         *args (ints): New attribute values.
@@ -143,7 +158,9 @@ class Rectangle(Base):
                     self.__y = v
 
     def to_dictionary(self):
-        """Return the dictionary representation of a Rectangle."""
+        """
+        Return the dictionary representation of a Rectangle.
+        """
         return {
             "x": self.__x,
             "y": self.__y,
@@ -153,7 +170,10 @@ class Rectangle(Base):
         }
 
     def __str__(self):
-        """Returns the print() and str() representation of the Rectangle class."""
+        """
+        Returns the print() and str() representation of the Rectangle class.
+        """
         return ("[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__, self.id,
                                                        self.__x, self.__y,
-                                                       self.__width, self.__height))                    
+                                                       self.__width, self.__height))
+

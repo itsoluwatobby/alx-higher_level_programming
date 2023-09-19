@@ -1,17 +1,27 @@
 #!/usr/bin/python3
-"""Defines a class Base"""
+"""
+Defines a class Base
+"""
 import json
 import csv
 # import turtle
 
 
 class Base:
-    """Represents a base class"""
+    """
+    The base of all the other classes in this project.
+    It's main goal is to manage the id attribute in all future classes and to
+    avoid duplicating the same code.
+
+    Attributes:
+        __nb_objects (int): A private class attribute
+    """
 
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initiates an instance of a base class
+        """
+        Initiates an instance of a base class
 
         Args:
             id (int) - an id argument of the base instance
@@ -24,7 +34,8 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Return the JSON serialized list of dicts.
+        """
+        Return the JSON serialized list of dicts.
 
         Args:
             list_dictionaries (list): A list of dictionaries.
@@ -35,7 +46,8 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """Write the JSON serialization of a list of objects to a file.
+        """
+        Write the JSON serialization of a list of objects to a file.
 
         Args:
             list_objs (list): A list of inherited Base instances.
@@ -50,7 +62,8 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """Return the deserialized JSON string.
+        """
+        Return the deserialized JSON string.
 
         Args:
             json_string (str): A JSON str the represents of a list of dicts.
@@ -64,7 +77,8 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Return a class instantied from a dictionary of attributes.
+        """
+        Return a class instantied from a dictionary of attributes.
 
         Args:
             **dictionary (dict): Key/value pairs of attributes to initialize.
@@ -79,7 +93,8 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """Returns a list of classes that are instantiated from a file of JSON strings.
+        """
+        Returns a list of classes that are instantiated from a file of JSON strings.
 
         Reads from `<cls.__name__>.json`.
 
@@ -97,7 +112,8 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """Write the CSV serialization of a list of objects to a file.
+        """
+        Write the CSV serialization of a list of objects to a file.
 
         Args:
             list_objs (list): A list of inherited Base instances.
@@ -117,7 +133,8 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """Returns a list of classes that are instantiated from a CSV file.
+        """
+        Returns a list of classes that are instantiated from a CSV file.
 
         Reads from `<cls.__name__>.csv`.
 
