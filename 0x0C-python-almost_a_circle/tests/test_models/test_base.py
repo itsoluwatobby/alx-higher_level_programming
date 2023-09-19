@@ -7,9 +7,11 @@ from models.base import Base
 
 
 class TestBaseClass(unittest.TestCase):
-    """Unittests for testing instantiation of the Base class."""
+    """
+    Unittests for testing instantiation of the Base class.
+    """
 
-    def setup(self):
+    def setUp(self):
         self.b1 = Base()
         self.b2 = Base()
         self.b3 = Base(12)
