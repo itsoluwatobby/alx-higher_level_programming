@@ -1,5 +1,4 @@
 #!/usr/bin/node
-// a script that prints a square
 const args = require('process').argv;
 if (isNaN(Number(args[2]))) console.log('Missing size');
 else {
