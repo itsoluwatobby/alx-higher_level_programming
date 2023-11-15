@@ -2,10 +2,10 @@
 const { dict } = require('./101-data');
 function modifyList (dict) {
   const result = {};
-  Object.entries(dict).map(([key,value]) => {
-    if(result.hasOwnProperty(value)) result[value].push(key);
-    else result[value] = [key];
-  });
+  for (const key in dict) {
+    if (result[dict[key]] === undefined) result[dict[key]] = [key];
+    else result[dict[key]].push(key);
+  }
   console.log(result);
 }
 modifyList(dict);
