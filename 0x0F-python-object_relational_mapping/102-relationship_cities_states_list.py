@@ -22,7 +22,6 @@ if __name__ == "__main__":
         print(e)
     else:
         uname, pwd, dbname = args[0], args[1], args[2]
-
         sql = 'mysql+mysqldb://{}:{}@localhost/{}'.format(
                 uname, pwd, dbname)
         engine = create_engine(sql, pool_pre_ping=True)

@@ -31,6 +31,4 @@ if __name__ == "__main__":
         queries = cur.fetchall()
         for query in queries:
             print(query)
-
-        cur.close()
         conn.close()

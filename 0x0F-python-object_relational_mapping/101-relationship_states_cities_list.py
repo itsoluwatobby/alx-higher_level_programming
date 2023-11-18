@@ -21,15 +21,12 @@ if __name__ == "__main__":
         print(e)
     else:
         uname, pwd, dbname = args[0], args[1], args[2]
-
         sql = 'mysql+mysqldb://{}:{}@localhost/{}'.format(
                 uname, pwd, dbname)
         engine = create_engine(sql, pool_pre_ping=True)
         Session = sessionmaker(bind=engine)
         session = Session()
-
         states = session.query(State).order_by(State.id).all()
-
         for state in states:
             print("{}: {}".format(state.id, state.name))
             for city in state.cities:
