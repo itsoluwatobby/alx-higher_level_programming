@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-    Write a python file that contains the class definition of a
-    City and an instance Base = declarative_base():
+Write a python file that contains the class definition of a
+City and an instance Base = declarative_base():
 """
 from sqlalchemy import Integer, String, Column, ForeignKey
 from model_state import Base

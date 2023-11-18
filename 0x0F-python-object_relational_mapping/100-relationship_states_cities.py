@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-# Creates the State “California” with the City “San Francisco”
-# from the database hbtn_0e_100_usa.
-# Usage: ./100-relationship_states_cities.py
-
+"""
+Creates the State “California” with the City “San Francisco”
+from the database hbtn_0e_100_usa.
+Usage: ./100-relationship_states_cities.py
+"""
 from sys import argv
 from relationship_state import State
 from relationship_city import City, Base
@@ -10,6 +11,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
+    """Selects records from the command line"""
     args = argv[1:]
     try:
         if not len(args) or len(args) > 3:
