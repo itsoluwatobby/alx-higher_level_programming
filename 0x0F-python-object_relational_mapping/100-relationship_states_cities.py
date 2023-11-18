@@ -19,12 +19,12 @@ if __name__ == "__main__":
     else:
         uname, pwd, dbname = args[0], args[1], args[2]
 
-        engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(uname, pwd, dbname), pool_pre_ping=True)
+        sql = 'mysql+mysqldb://{}:{}@localhost/{}'.format(
+                uname, pwd, dbname)
+        engine = create_engine(sql, pool_pre_ping=True)
         Base.metadata.create_all(engine)
         Session = sessionmaker(bind=engine)
         session = Session()
-
         session.add(City(name='San Francisco', state=State(name='California')))
         session.commit()
-
         session.close()

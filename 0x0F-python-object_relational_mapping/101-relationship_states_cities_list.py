@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 # a script that lists all State objects, and corresponding City
 # objects, contained in the database hbtn_0e_101_usa
-# Your script should take 3 arguments: 
-#                                       <mysql username>, 
+# Your script should take 3 arguments:
+#                                       <mysql username>,
 #                                       <mysql password>,
 #                                       <database name>
 
@@ -22,7 +22,9 @@ if __name__ == "__main__":
     else:
         uname, pwd, dbname = args[0], args[1], args[2]
 
-        engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(uname, pwd, dbname), pool_pre_ping=True)
+        sql = 'mysql+mysqldb://{}:{}@localhost/{}'.format(
+                uname, pwd, dbname)
+        engine = create_engine(sql, pool_pre_ping=True)
         Session = sessionmaker(bind=engine)
         session = Session()
 

@@ -17,19 +17,15 @@ if __name__ == "__main__":
         name = sname.split(",")[0]
 
         conn = MySQLdb.connect(
-                host='localhost', port=3306, 
-                user=uname, password=pwd, 
-                db=dbname, charset='utf8'
-                )
+                host='localhost', port=3306,
+                user=uname, password=pwd,
+                db=dbname, charset='utf8')
         cur = conn.cursor()
-        sql="""SELECT cities.name FROM states 
-        INNER JOIN cities ON states.id = cities.state_id 
-        WHERE states.name = %s 
-        ORDER BY cities.id ASC"""
-
+        sql=""" SELECT cities.name FROM states
+        INNER JOIN cities ON states.id = cities.state_id
+        WHERE states.name = %s ORDER BY cities.id ASC """
         cur.execute(sql, (name,))
         queries = cur.fetchall()
         print(", ".join([city[0] for city in queries]))
-
         cur.close()
         conn.close()
