@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-# SQL INJECTION
-# a script that takes in an argument and displays all values in the
-#   states table of hbtn_0e_0_usa where name matches the argument.
+"""
+SQL INJECTION
+a script that takes in an argument and displays all values in the
+states table of hbtn_0e_0_usa where name matches the argument.
+"""
 import sys
 import MySQLdb
 
 if __name__ == "__main__":
-
+    """Selects records from the command line"""
     args = sys.argv[1:]
     try:
         if not len(args) or len(args) > 4:

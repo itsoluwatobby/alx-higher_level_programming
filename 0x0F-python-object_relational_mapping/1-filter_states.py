@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-# a script that lists all states with a name starting with N (upper N) from
-#   the database hbtn_0e_0_usa:
+"""
+a script that lists all states with a name starting with
+N (upper N) from the database hbtn_0e_0_usa:
+"""
 import sys
 import MySQLdb
 
 if __name__ == "__main__":
-
+    """Selects records from the command line"""
     args = sys.argv[1:]
     uname, pwd, dbname = args[0], args[1], args[2]
 
