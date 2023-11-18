@@ -4,9 +4,9 @@ import sys
 import MySQLdb
 
 if __name__ == "__main__":
+     """Selects records from the command line"""
     args = sys.argv[1:]
     uname, pwd, dbname = args[0], args[1], args[2]
-
     conn = MySQLdb.connect(
             host='localhost',
             port=3306, user=uname,
@@ -17,5 +17,4 @@ if __name__ == "__main__":
     queries = cur.fetchall()
     for query in queries:
         print(query)
-    cur.close()
     conn.close()
