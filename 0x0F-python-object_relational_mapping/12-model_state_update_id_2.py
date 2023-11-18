@@ -23,7 +23,7 @@ if __name__ == "__main__":
         engine = create_engine(sql, pool_pre_ping=True)
         Session = sessionmaker(bind=engine)
         session = Session()
-        target = session.query(State).filter(State.id == 2).first() 
+        target = session.query(State).filter(State.id == 2).first()
         target.name = 'New Mexico'
         session.add(target)
         session.commit()

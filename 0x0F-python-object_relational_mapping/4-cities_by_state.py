@@ -20,8 +20,9 @@ if __name__ == "__main__":
                 password=pwd, db=dbname,
                 charset='utf8')
         cur = conn.cursor()
-        sql="""SELECT c.id, c.name, s.name FROM cities AS c, states AS s 
-        WHERE c.state_id = s.id ORDER BY c.id ASC"""
+        sql = """SELECT c.id, c.name, s.name
+            FROM cities AS c, states AS s WHERE c.state_id = s.id
+            ORDER BY c.id"""
         cur.execute(sql)
         queries = cur.fetchall()
         for query in queries:

@@ -19,12 +19,11 @@ if __name__ == "__main__":
     else:
         uname, pwd, dbname = args[0], args[1], args[2]
 
-        sql = 'mysql+mysqldb://{}:{}@localhost/{}'.\
-                format(uname, pwd, dbname)
+        sql = 'mysql+mysqldb://{}:{}@localhost/{}'.format(
+                uname, pwd, dbname)
         engine = create_engine(sql, pool_pre_ping=True)
         Session = sessionmaker(bind=engine)
         session = Session()
-
         state = State(name='Louisiana')
         session.add(state)
         session.commit()
