@@ -10,6 +10,7 @@ from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
+    """Selects records from the command line"""
     args = argv[1:]
     try:
         if not len(args) or len(args) > 3:

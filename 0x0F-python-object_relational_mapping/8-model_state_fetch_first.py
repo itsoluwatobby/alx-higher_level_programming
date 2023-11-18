@@ -1,11 +1,15 @@
 #!/usr/bin/python3
-# a script that prints the first State object from the database hbtn_0e_6_usa
+"""
+a script that prints the first State object from the
+database hbtn_0e_6_usa
+"""
 from sys import argv
 from model_state import Base, State
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
+    """Selects records from the command line"""
     args = argv[1:]
     try:
         if not len(args) or len(args) > 3:
