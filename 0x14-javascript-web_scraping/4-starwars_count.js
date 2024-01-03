@@ -10,15 +10,15 @@
 
 const request = require('request');
 
-const url = 'https://swapi-api.alx-tools.com/api/films';
-
-request(url, (error, response, body) => {
+request('https://swapi-api.alx-tools.com/api/films', (error, response, body) => {
   if (!error && response.statusCode === 200) {
     const res = JSON.parse(body);
     let count = 0;
-    res.results.filter((eachMovie) => {
-      return eachMovie.characters.filter((each) => each.includes('18') ? count++ : null);
-    });
+    for (const x in res.results) {
+      for (const c of res.results[x].characters) {
+        if (c.includes('18')) count++;
+      }
+    }
     console.log(count);
   } else {
     console.log(error);
