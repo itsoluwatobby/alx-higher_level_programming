@@ -16,7 +16,10 @@ request('https://swapi-api.alx-tools.com/api/films', (error, response, body) => 
     let count = 0;
     for (const x in res.results) {
       for (const c of res.results[x].characters) {
-        if (c.includes('18')) count++;
+        if (c.includes('18')) {
+          count++;
+          break;
+        }
       }
     }
     console.log(count);
