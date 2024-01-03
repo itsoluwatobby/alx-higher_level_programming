@@ -11,8 +11,10 @@ request(url, async (error, response, body) => {
   if (!error && response.statusCode === 200) {
     const todos = JSON.parse(body);
     const result = {};
-    for (const todo of todos) {
-      if (todo.completed) result[todo.userId] = todo.id;
+    for (const x in todos) {
+      if (todos[x].completed) {
+        result[todos[x].userId] = (result[todos[x].userId] + 1) || 1;
+      }
     }
     console.log(result);
   } else {
