@@ -20,5 +20,6 @@ $(document).ready(function() {
 
   $('DIV#clear_list').click(function() {
     $('li').remove();
+    lastItem = 0, id = 1;
   });
 });
